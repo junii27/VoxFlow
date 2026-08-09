@@ -1,0 +1,34 @@
+name: VoxFlow
+options:
+  bundleIdPrefix: com.voxflow
+  deploymentTarget:
+    macOS: "26.0"
+  xcodeVersion: "16.0"
+  createIntermediateGroups: true
+
+targets:
+  VoxFlow:
+    type: application
+    platform: macOS
+    sources:
+      - path: VoxFlow
+        excludes:
+          - "Info.plist"
+          - "VoxFlow.entitlements"
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: false
+        INFOPLIST_FILE: VoxFlow/Info.plist
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: "VoxFlow needs microphone access for voice dictation."
+        INFOPLIST_KEY_NSSpeechRecognitionUsageDescription: "VoxFlow uses on-device speech recognition to transcribe your voice."
+        CODE_SIGN_ENTITLEMENTS: VoxFlow/VoxFlow.entitlements
+        PRODUCT_BUNDLE_IDENTIFIER: com.voxflow.app
+        PRODUCT_NAME: VoxFlow
+        MACOSX_DEPLOYMENT_TARGET: "26.0"
+        SWIFT_VERSION: "6.0"
+        ENABLE_APP_SANDBOX: false
+        CODE_SIGN_STYLE: Automatic
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        LS_UIELEMENT: true
+    entitlements:
+      path: VoxFlow/VoxFlow.entitlements

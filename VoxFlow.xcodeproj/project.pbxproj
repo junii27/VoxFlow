@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05439B4F10820623B93D289B /* TranscriptionEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B2FE8D90919E881DEEA41 /* TranscriptionEntry.swift */; };
+		17CE44D1709BB8F672750DAD /* DictationHUDContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629BDB7DA540FD6880FA0CC /* DictationHUDContentView.swift */; };
+		21C5129D680EB957CFDA2569 /* PermissionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93BAD9DAAF6AAE46AF260D /* PermissionsManager.swift */; };
+		2758B48FF7C2A297C84346BA /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E36A70E447C817A4282820 /* MenuBarView.swift */; };
+		284F61BFA4AB6448FC8CDBDC /* AudioCaptureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B0D28A189E338B709D4353 /* AudioCaptureManager.swift */; };
+		2E4FFBE730CD4EDA295ACE7F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7327101DA9F2F8B618F48F /* Extensions.swift */; };
+		3804625383A779FA77EF972C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6BDA319C39F7110B007B28 /* OnboardingView.swift */; };
+		3C276D28E71A2D67BEC46671 /* SpeechRecognitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FFA457BEED3C68A45F3D75 /* SpeechRecognitionManager.swift */; };
+		4930804818559E2E65C2417B /* TextOutputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07424C9058F38DB624C731F /* TextOutputManager.swift */; };
+		4AA5F07177816FD680AF7EFC /* DictationHUDPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3845FADE18BD3F8399A12E /* DictationHUDPanel.swift */; };
+		5EA3CD8B9DBBF23D93375A93 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C197927F96F25B67994DD59 /* WaveformView.swift */; };
+		5F159D17897A1444FA2F2266 /* VoxFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A88C676B98437BA147E6279 /* VoxFlowApp.swift */; };
+		7088271B5A3D0CC6364B7274 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696329822D3243C58DB2B7C3 /* AppState.swift */; };
+		8B2E7CB96B6B898028DE992A /* LiveTranscriptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CC4B33DFF064F9FE967CF4 /* LiveTranscriptView.swift */; };
+		B68247F13726C19258D9E948 /* TextCleanupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD838B691CE289D45628C91 /* TextCleanupManager.swift */; };
+		D1225406DABBE0B27933B540 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E8B1FEF5DB576E5E0524510 /* Assets.xcassets */; };
+		EA0471DDC1BDD4E4959ABACE /* DictationPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A1B8EB94BA29EBF418457 /* DictationPipeline.swift */; };
+		EBEC512B7D5C22BFD985F65C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A6D264E34AEABA71972B6 /* SettingsView.swift */; };
+		FEFABD27E4F05B6FFBCBA022 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD04264EA6F498EE4523139A /* Constants.swift */; };
+		FFB68D38D3F0285E571522EB /* HotkeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C839460551AD0683F2277BD /* HotkeyManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03FFA457BEED3C68A45F3D75 /* SpeechRecognitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionManager.swift; sourceTree = "<group>"; };
+		1F4B2FE8D90919E881DEEA41 /* TranscriptionEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionEntry.swift; sourceTree = "<group>"; };
+		2A6BDA319C39F7110B007B28 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		2A88C676B98437BA147E6279 /* VoxFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoxFlowApp.swift; sourceTree = "<group>"; };
+		2B7327101DA9F2F8B618F48F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		2D3845FADE18BD3F8399A12E /* DictationHUDPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictationHUDPanel.swift; sourceTree = "<group>"; };
+		3E8B1FEF5DB576E5E0524510 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C93BAD9DAAF6AAE46AF260D /* PermissionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsManager.swift; sourceTree = "<group>"; };
+		556A6D264E34AEABA71972B6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5DD838B691CE289D45628C91 /* TextCleanupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCleanupManager.swift; sourceTree = "<group>"; };
+		63E36A70E447C817A4282820 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		696329822D3243C58DB2B7C3 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		8C197927F96F25B67994DD59 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
+		94B0D28A189E338B709D4353 /* AudioCaptureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCaptureManager.swift; sourceTree = "<group>"; };
+		9C839460551AD0683F2277BD /* HotkeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyManager.swift; sourceTree = "<group>"; };
+		B9CC4B33DFF064F9FE967CF4 /* LiveTranscriptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTranscriptView.swift; sourceTree = "<group>"; };
+		C83AD7C02072E231B4A63570 /* VoxFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoxFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF3A1B8EB94BA29EBF418457 /* DictationPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictationPipeline.swift; sourceTree = "<group>"; };
+		D629BDB7DA540FD6880FA0CC /* DictationHUDContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictationHUDContentView.swift; sourceTree = "<group>"; };
+		DD04264EA6F498EE4523139A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F07424C9058F38DB624C731F /* TextOutputManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextOutputManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0A6D9CB600EEA6785E1C9889 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C83AD7C02072E231B4A63570 /* VoxFlow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7202094B0B768CFF9D40DF4E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B9CC4B33DFF064F9FE967CF4 /* LiveTranscriptView.swift */,
+				63E36A70E447C817A4282820 /* MenuBarView.swift */,
+				2A6BDA319C39F7110B007B28 /* OnboardingView.swift */,
+				556A6D264E34AEABA71972B6 /* SettingsView.swift */,
+				8C197927F96F25B67994DD59 /* WaveformView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7491D2BEDE74B8625A89F6DE /* VoxFlow */ = {
+			isa = PBXGroup;
+			children = (
+				3E8B1FEF5DB576E5E0524510 /* Assets.xcassets */,
+				2A88C676B98437BA147E6279 /* VoxFlowApp.swift */,
+				D882DE598AB19D86AFA09468 /* Core */,
+				D11E01A520A13001D080A505 /* HUD */,
+				BE6F2F0F99AA583880E4D7B2 /* Managers */,
+				8FEDA91CECDCCF471AABBE97 /* Utilities */,
+				7202094B0B768CFF9D40DF4E /* Views */,
+			);
+			path = VoxFlow;
+			sourceTree = "<group>";
+		};
+		8FEDA91CECDCCF471AABBE97 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DD04264EA6F498EE4523139A /* Constants.swift */,
+				2B7327101DA9F2F8B618F48F /* Extensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BE6F2F0F99AA583880E4D7B2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				94B0D28A189E338B709D4353 /* AudioCaptureManager.swift */,
+				9C839460551AD0683F2277BD /* HotkeyManager.swift */,
+				4C93BAD9DAAF6AAE46AF260D /* PermissionsManager.swift */,
+				03FFA457BEED3C68A45F3D75 /* SpeechRecognitionManager.swift */,
+				5DD838B691CE289D45628C91 /* TextCleanupManager.swift */,
+				F07424C9058F38DB624C731F /* TextOutputManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D11E01A520A13001D080A505 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				D629BDB7DA540FD6880FA0CC /* DictationHUDContentView.swift */,
+				2D3845FADE18BD3F8399A12E /* DictationHUDPanel.swift */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
+		D882DE598AB19D86AFA09468 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				696329822D3243C58DB2B7C3 /* AppState.swift */,
+				CF3A1B8EB94BA29EBF418457 /* DictationPipeline.swift */,
+				1F4B2FE8D90919E881DEEA41 /* TranscriptionEntry.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EB37861AC4298657579514C0 = {
+			isa = PBXGroup;
+			children = (
+				7491D2BEDE74B8625A89F6DE /* VoxFlow */,
+				0A6D9CB600EEA6785E1C9889 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		925C1F6BD0A26298E2CAD64F /* VoxFlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECCB7DAEEEFD2D9C9219FC2A /* Build configuration list for PBXNativeTarget "VoxFlow" */;
+			buildPhases = (
+				6E89A34CBDCE6411662A7E37 /* Sources */,
+				A5C12CCECC2277B1944D9FBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VoxFlow;
+			packageProductDependencies = (
+			);
+			productName = VoxFlow;
+			productReference = C83AD7C02072E231B4A63570 /* VoxFlow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		547462B93EDEEF6DFA3BE383 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					925C1F6BD0A26298E2CAD64F = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4C51E7E0ED5F6C7BF92E0228 /* Build configuration list for PBXProject "VoxFlow" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = EB37861AC4298657579514C0;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 0A6D9CB600EEA6785E1C9889 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				925C1F6BD0A26298E2CAD64F /* VoxFlow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5C12CCECC2277B1944D9FBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1225406DABBE0B27933B540 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E89A34CBDCE6411662A7E37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7088271B5A3D0CC6364B7274 /* AppState.swift in Sources */,
+				284F61BFA4AB6448FC8CDBDC /* AudioCaptureManager.swift in Sources */,
+				FEFABD27E4F05B6FFBCBA022 /* Constants.swift in Sources */,
+				17CE44D1709BB8F672750DAD /* DictationHUDContentView.swift in Sources */,
+				4AA5F07177816FD680AF7EFC /* DictationHUDPanel.swift in Sources */,
+				EA0471DDC1BDD4E4959ABACE /* DictationPipeline.swift in Sources */,
+				2E4FFBE730CD4EDA295ACE7F /* Extensions.swift in Sources */,
+				FFB68D38D3F0285E571522EB /* HotkeyManager.swift in Sources */,
+				8B2E7CB96B6B898028DE992A /* LiveTranscriptView.swift in Sources */,
+				2758B48FF7C2A297C84346BA /* MenuBarView.swift in Sources */,
+				3804625383A779FA77EF972C /* OnboardingView.swift in Sources */,
+				21C5129D680EB957CFDA2569 /* PermissionsManager.swift in Sources */,
+				EBEC512B7D5C22BFD985F65C /* SettingsView.swift in Sources */,
+				3C276D28E71A2D67BEC46671 /* SpeechRecognitionManager.swift in Sources */,
+				B68247F13726C19258D9E948 /* TextCleanupManager.swift in Sources */,
+				4930804818559E2E65C2417B /* TextOutputManager.swift in Sources */,
+				05439B4F10820623B93D289B /* TranscriptionEntry.swift in Sources */,
+				5F159D17897A1444FA2F2266 /* VoxFlowApp.swift in Sources */,
+				5EA3CD8B9DBBF23D93375A93 /* WaveformView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8FD84FD7C3E6F95ED8F94038 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CCA9AE9843E8D738903BB40C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VoxFlow/VoxFlow.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VoxFlow/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "VoxFlow needs microphone access for voice dictation.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "VoxFlow uses on-device speech recognition to transcribe your voice.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LS_UIELEMENT = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.voxflow.app;
+				PRODUCT_NAME = VoxFlow;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		D05066C543753599749DF196 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E155F7B582F1843836A7C68A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VoxFlow/VoxFlow.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VoxFlow/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "VoxFlow needs microphone access for voice dictation.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "VoxFlow uses on-device speech recognition to transcribe your voice.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LS_UIELEMENT = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.voxflow.app;
+				PRODUCT_NAME = VoxFlow;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C51E7E0ED5F6C7BF92E0228 /* Build configuration list for PBXProject "VoxFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FD84FD7C3E6F95ED8F94038 /* Debug */,
+				D05066C543753599749DF196 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		ECCB7DAEEEFD2D9C9219FC2A /* Build configuration list for PBXNativeTarget "VoxFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCA9AE9843E8D738903BB40C /* Debug */,
+				E155F7B582F1843836A7C68A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 547462B93EDEEF6DFA3BE383 /* Project object */;
+}

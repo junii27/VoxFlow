@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Hide from Dock — menu bar only app -->
+    <key>LSUIElement</key>
+    <true/>
+
+    <!-- Privacy usage descriptions -->
+    <key>NSMicrophoneUsageDescription</key>
+    <string>VoxFlow needs microphone access for voice dictation.</string>
+
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>VoxFlow uses on-device speech recognition to transcribe your voice.</string>
+</dict>
+</plist>
