@@ -76,10 +76,12 @@ class SpeechRecognitionManager {
         recognitionTask = nil
     }
 
-    static func requestAuthorization() async -> SFSpeechRecognizerAuthorizationStatus {
+    nonisolated static func requestAuthorization() async -> SFSpeechRecognizerAuthorizationStatus {
         await withCheckedContinuation { continuation in
-            SFSpeechRecognizer.requestAuthorization { status in
-                continuation.resume(returning: status)
+            SFSpeechRecognizer.requestAuthorization { @Sendable status in
+                Task { @MainActor in
+                    continuation.resume(returning: status)
+                }
             }
         }
     }

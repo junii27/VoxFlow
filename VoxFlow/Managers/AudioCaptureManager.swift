@@ -14,10 +14,10 @@ class AudioCaptureManager {
         let inputNode = audioEngine.inputNode
         let recordingFormat = inputNode.outputFormat(forBus: 0)
 
-        inputNode.installTap(onBus: 0, bufferSize: VFConstants.audioBufferSize, format: recordingFormat) { [weak self] buffer, _ in
+        inputNode.installTap(onBus: 0, bufferSize: VFConstants.audioBufferSize, format: recordingFormat) { buffer, _ in
             request.append(buffer)
             let level = AudioCaptureManager.computeAudioLevel(buffer: buffer)
-            DispatchQueue.main.async {
+            Task { @MainActor [weak self] in
                 self?.audioLevelCallback?(level)
             }
         }
@@ -47,10 +47,12 @@ class AudioCaptureManager {
         return min(1.0, rms * 8.0)
     }
 
-    static func requestMicrophonePermission() async -> Bool {
+    nonisolated static func requestMicrophonePermission() async -> Bool {
         await withCheckedContinuation { continuation in
-            AVCaptureDevice.requestAccess(for: .audio) { granted in
-                continuation.resume(returning: granted)
+            AVCaptureDevice.requestAccess(for: .audio) { @Sendable granted in
+                Task { @MainActor in
+                    continuation.resume(returning: granted)
+                }
             }
         }
     }
