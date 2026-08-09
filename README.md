@@ -128,6 +128,16 @@ whisper/
 2. Drag `VoxFlow.app` into your `/Applications` directory.
 3. Launch VoxFlow from Launchpad or Finder.
 
+### macOS Gatekeeper Security Note
+
+Because VoxFlow is an open-source project built locally without a paid Apple Developer Notarization ticket, macOS Gatekeeper may show a warning when opening the app for the first time.
+
+To open VoxFlow on macOS:
+
+- Option A (Recommended): Right-click (or Control-click) `VoxFlow.app` in Finder, select **Open**, and click **Open** in the prompt.
+- Option B: Go to **System Settings -> Privacy & Security**, scroll down to the Security section, and click **Open Anyway** next to VoxFlow.
+- Option C (Terminal): Run `xattr -cr /Applications/VoxFlow.app` in Terminal to clear quarantine flags.
+
 ### Building from Source
 
 ```bash
