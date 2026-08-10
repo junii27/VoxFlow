@@ -189,3 +189,5 @@ DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcodebuild -project Vox
 ## Privacy Policy
 
 VoxFlow does not send audio recordings, transcriptions, or application metadata to any remote servers. All processing occurs locally on your Mac using hardware-accelerated Apple Silicon engines.
+
+<!-- VoxFlow: Fast Native macOS Voice Dictation -->
