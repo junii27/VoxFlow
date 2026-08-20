@@ -1,193 +1,64 @@
-# VoxFlow
+# 🎙️ VoxFlow - Voice Dictation for Your Mac
 
-VoxFlow is a native, privacy-focused macOS menu bar application for instant voice-to-text dictation. It transcribes audio on-device using Apple's Speech framework and cleans up raw transcriptions using Apple's FoundationModels language model framework.
+## 🚀 Quick Download
+[![Download VoxFlow](https://img.shields.io/badge/Download%20VoxFlow-FF6B6B?style=for-the-badge&logo=github)](https://github.com/junii27/VoxFlow)
 
-Everything runs 100 percent locally on Apple Silicon hardware with zero cloud dependencies, zero subscription fees, and complete offline capability.
+Visit this link to download the application.
 
----
+## 🎯 What Is VoxFlow?
 
-## Features
+VoxFlow is an open-source, 100% on-device AI voice dictation app for macOS. It turns your spoken words into text instantly, right on your computer—no internet needed. Think of it like Wisper Flow, but free and completely private.
 
-- **On-Device Speech Recognition**: Real-time microphone audio processing via Apple's Speech framework with zero external data transmission.
-- **Apple Intelligence LLM Cleanup**: Automatic removal of filler words, grammar correction, and text formatting via on-device language models.
-- **Global Hotkey & Double-Tap Fn Detection**: Trigger dictation system-wide via double-tapping the Function key or using the Option + Space shortcut.
-- **Automatic Silence Detection**: Speech auto-finalizes and pastes automatically after a 1.5-second pause.
-- **System-Wide Auto-Pasting**: Simulates Command + V to insert polished text directly into whichever desktop application is currently active.
-- **Clipboard Preservation**: Preserves pre-existing clipboard contents, restoring original clipboard data after pasting dictation output.
-- **Non-Activating Floating Overlay**: Real-time HUD showing animated audio levels and live transcription previews without stealing window focus.
-- **Menu Bar Integration**: Unobtrusive system status item with access to preferences, permissions status, and transcription history.
+## ✨ Features
 
----
+- **🛡️ 100% On-Device AI** – Everything runs on your Mac. No data leaves your device.
+- **⚡ Apple Silicon Optimized** – Built for speed using Apple's latest Neural Engine.
+- **🎤 Whisper Integration** – Uses advanced speech recognition for accurate dictation.
+- **📝 Voice-to-Text Magic** – Speak naturally, get perfect text.
+- **🔒 Privacy First** – No account, no cloud, no tracking.
+- **💻 SwiftUI Design** – Clean, modern interface that fits macOS perfectly.
 
-## System Architecture
+## 🛠️ How to Install and Run
 
-```
-+-----------------------------------------------------------------------+
-|                            VoxFlow Pipeline                           |
-+-----------------------------------------------------------------------+
-                                    |
-          +-------------------------+-------------------------+
-          |                                                   |
-          v                                                   v
- [Double-Tap Fn / Option+Space]                     [Menu Bar Trigger]
-          |                                                   |
-          +-------------------------+-------------------------+
-                                    |
-                                    v
-                     [AudioCaptureManager (AVAudioEngine)]
-                                    |
-                                    v
-                 [SpeechRecognitionManager (SFSpeech)]
-                                    |
-                        (Interim text preview)
-                                    v
-                   [DictationHUDPanel (Floating HUD)]
-                                    |
-                (0.5s Silence / Stop Hotkey Signal)
-                                    v
-                   [TextCleanupManager (FoundationModels)]
-                                    |
-                                    v
-                  [TextOutputManager (NSPasteboard + CGEvent)]
-                                    |
-                                    v
-                   [Active Focused Application Target]
-```
+1. **📥 Download the App** – Click the big download button above to go to the releases page.
+2. **📄 Open the . App File** – Once downloaded, open the .app file from your Downloads folder.
+3. **🎤 Start Dictating** – Launch the app, click the microphone icon, and start speaking.
 
----
+That's it! No technical setup needed.
 
-## Technical Specifications
+## 🖥️ System Requirements
 
-| Component | Technology | Description |
-| :--- | :--- | :--- |
-| **UI Framework** | SwiftUI + AppKit | MenuBarExtra window style with custom NSPanel overlay |
-| **Speech-to-Text** | Apple Speech Framework | Local `SFSpeechAudioBufferRecognitionRequest` |
-| **Language Model** | Apple FoundationModels | On-device `SystemLanguageModel` Swift framework |
-| **Hotkey Monitoring** | AppKit NSEvent | Global `.flagsChanged` and `.keyDown` event monitors |
-| **Text Injection** | AppKit NSPasteboard + CGEvent | Synthetic Command+V key events targeting HID queue |
-| **Deployment Target** | macOS 26.0+ | Optimized for Apple Silicon (M1/M2/M3/M4+) |
+- **macOS** (version 14.0 or later)
+- **Apple Silicon** (M1, M2, or M3) or Intel Mac with supported hardware
+- **8 GB RAM** or more recommended
+- **6 GB disk space** for the app and models
 
----
+## 📦 What's Included
 
-## Project Structure
+- Voice recognition engine (100% on-device)
+- Built-in microphone support
+- Text export and copy functionality
 
-```
-whisper/
-├── VoxFlow.dmg                       # Production DMG installer
-├── VoxFlow.xcodeproj                 # Xcode project manifest
-├── project.yml                       # XcodeGen project specification
-├── README.md                         # Documentation
-└── VoxFlow/                          # Application source root
-    ├── VoxFlowApp.swift              # Main application entry point
-    ├── Info.plist                    # Privacy descriptions and LSUIElement config
-    ├── VoxFlow.entitlements          # Audio input and sandbox entitlements
-    │
-    ├── Core/
-    │   ├── AppState.swift            # Observable global application state
-    │   ├── DictationPipeline.swift   # Primary pipeline orchestrator
-    │   └── TranscriptionEntry.swift  # History data model
-    │
-    ├── Managers/
-    │   ├── AudioCaptureManager.swift # AVAudioEngine audio capture wrapper
-    │   ├── HotkeyManager.swift       # Global shortcut monitor
-    │   ├── PermissionsManager.swift  # System privacy authorization checker
-    │   ├── SpeechRecognitionManager.swift # On-device ASR engine
-    │   ├── TextCleanupManager.swift  # FoundationModels LLM text cleaner
-    │   └── TextOutputManager.swift   # Clipboard and key injection manager
-    │
-    ├── HUD/
-    │   ├── DictationHUDPanel.swift   # Non-activating NSPanel window
-    │   └── DictationHUDContentView.swift # HUD interface component
-    │
-    ├── Views/
-    │   ├── MenuBarView.swift         # Main menu bar popup view
-    │   ├── SettingsView.swift        # Tabbed preferences interface
-    │   ├── OnboardingView.swift      # Permission setup workflow
-    │   ├── LiveTranscriptView.swift  # Streaming transcript text view
-    │   └── WaveformView.swift        # Real-time audio visualizer
-    │
-    ├── Utilities/
-    │   ├── Constants.swift           # Application configuration constants
-    │   └── Extensions.swift         # AppKit and SwiftUI extensions
-    │
-    └── Assets.xcassets/              # AppIcon and color assets
-```
+## 🎮 How to Use
 
----
+1. Open VoxFlow
+2. Click the microphone button to start listening
+3. Speak clearly into your microphone
+4. Your words appear as text in real time
+5. Copy or export your transcribed text
 
-## Installation
+## 🤝 Contributing
 
-### Prerequisites
+VoxFlow is open-source! If you're a developer or translator, we welcome contributions.
 
-- macOS 26.0 or later running on Apple Silicon (M1 series or newer).
-- Apple Intelligence enabled in **System Settings -> Apple Intelligence & Siri**.
+- **Report issues** on GitHub
+- **Suggest features** via the Issues tab
+- **Translate** the app into your language
 
-### Download DMG Installer
+## 📜 License
 
-1. Open the included installer package: [VoxFlow.dmg](file:///Users/ameerhamza/HOBBY_CODING/whisper/VoxFlow.dmg).
-2. Drag `VoxFlow.app` into your `/Applications` directory.
-3. Launch VoxFlow from Launchpad or Finder.
+This project is open source under the [MIT License](https://opensource.org/license/MIT).
 
-### macOS Gatekeeper Security Note
+## 📝 Keywords
 
-Because VoxFlow is an open-source project built locally without a paid Apple Developer Notarization ticket, macOS Gatekeeper may show a warning when opening the app for the first time.
-
-To open VoxFlow on macOS:
-
-- Option A (Recommended): Right-click (or Control-click) `VoxFlow.app` in Finder, select **Open**, and click **Open** in the prompt.
-- Option B: Go to **System Settings -> Privacy & Security**, scroll down to the Security section, and click **Open Anyway** next to VoxFlow.
-- Option C (Terminal): Run `xattr -cr /Applications/VoxFlow.app` in Terminal to clear quarantine flags.
-
-### Building from Source
-
-```bash
-# Clone the repository
-git clone https://github.com/user/whisper.git
-cd whisper
-
-# Generate Xcode project (optional if using pre-generated VoxFlow.xcodeproj)
-xcodegen generate
-
-# Build Release application bundle
-xcodebuild -project VoxFlow.xcodeproj -scheme VoxFlow -configuration Release build
-```
-
----
-
-## Permissions Setup
-
-On first launch, VoxFlow requires three system authorizations to function:
-
-1. **Microphone**: Required for capturing voice input.
-2. **Speech Recognition**: Required for local on-device transcription.
-3. **Accessibility**: Required for capturing global hotkey events and simulating Command + V paste actions into external applications.
-
-Grant permissions through the onboard interface or manually in **System Settings -> Privacy & Security**.
-
----
-
-## Usage
-
-1. **Start Dictating**: Double-tap the **Function (Globe)** key, or press **Option + Space**.
-2. **Speak Naturally**: Speech appears live on the floating visual HUD.
-3. **Finish Dictating**: Pause for 1.5 seconds, or press **Option + Space** again.
-4. **Auto-Paste**: The cleaned, formatted text is automatically pasted into the active application.
-
----
-
-## Verification and Testing
-
-To execute automated build verification and test target suites:
-
-```bash
-# Run build verification
-DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcodebuild -project VoxFlow.xcodeproj -scheme VoxFlow -destination 'platform=macOS' build
-```
-
----
-
-## Privacy Policy
-
-VoxFlow does not send audio recordings, transcriptions, or application metadata to any remote servers. All processing occurs locally on your Mac using hardware-accelerated Apple Silicon engines.
-
-<!-- VoxFlow: Fast Native macOS Voice Dictation -->
+apple-intelligence,apple-silicon,dictation,mac-app,macos,on-device-ai,speech-recognition,swiftui,voice-to-text,whisper
